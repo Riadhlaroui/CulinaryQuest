@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My recipes</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="container" id="container">
+        <nav class="navbar">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+
+            <div class="title-warrper">
+                <a href="/index.html">
+                    <h1 class="title">MY RECIPES</h1>
+                </a>
+            </div>
+        </nav>
+        <div class="line"></div>
+        <section class="main">
+            <div class="search-warrper">
+                <form id="search-form" class="search-form">
+                    <input placeholder="Search for recipes" type="text" name="text" class="input" id="input">
+                    <button type="button" class="input-button" id="openFilterBtn"><img src="/Assets/filter-icon.png" alt="Filter"></button>
+                </form>
+                <div class="utils">
+                    <a href="#" id="fav-link">
+                        <img src="/Assets/heart.png" alt="Fav" class="bounceIn">
+                    </a>
+                    <a href="#" id="his-link">
+                        <img src="/Assets/history.png" alt="History" class="his bounceIn">
+                    </a>
+                </div>
+            </div>
+            <div class="filter-options" id="filterModal">
+                <span class="closeBtn"><img src="/Assets/close-icon.png" alt="Close"></span>
+                <h4 class="optionTitle">By Cuisines : </h4>
+                <hr>
+                <div class="btnContanier">
+                    <button type="button" class="filterBtn">African</button>
+                    <button type="button" class="filterBtn">Asian</button>
+                    <button type="button" class="filterBtn">American</button>
+                    <button type="button" class="filterBtn">British</button>
+                    <button type="button" class="filterBtn">Cajun</button>
+                    <button type="button" class="filterBtn">Caribbean</button>
+                    <button type="button" class="filterBtn">Chinese</button>
+                    <button type="button" class="filterBtn">Eastern European</button>
+                    <button type="button" class="filterBtn">European</button>
+                    <button type="button" class="filterBtn">French</button>
+                    <button type="button" class="filterBtn">German</button>
+                    <button type="button" class="filterBtn">Greek</button>
+                    <button type="button" class="filterBtn">Indian</button>
+                    <button type="button" class="filterBtn">Italian</button>
+                    <button type="button" class="filterBtn">Japanese</button>
+                </div>
+            </div>
+
+            <div id="recipe-list">
+            </div>
+            <div id="fav-content" class="content-section" style="display: none;">Favorites content here</div>
+            <div id="history-content" class="content-section" style="display: none;">History content here</div>
+        </section>
+
+        <div id="detailed-view" style="display:none;">
+            <button id="back-button">Back</button>
+            <div id="detailed-info"></div>
+        </div>
+        
+        
+        <div class="doughnut">
+            <pre id="canvas" style="color: #222121; white-space: pre;"></pre>
+        </div>
+
+        <div class="loading" id="loading-screen" style="display: none;">
+            <div class="loader"></div>
+        </div>
+
+    </section>
+
+    <script src="/Scriptes/doughnut.js"></script>
+    <script src="/Scriptes/script.js"></script>
+</body>
+</html>
